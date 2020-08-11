@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo&display=swap");
+$dark_o: #fc7400;
+$light_o: #ffa009;
+$light_t: #00b49d;
+$t: #007563;
+$dark_t: #012523;
+$background_color: rgb(1, 21, 20);
+$white: #e6f1ff;
+$lightest_slate: #ccd6f6;
+$light_slate: #a8b2d1;
+$slate: #8892b0;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Heebo", sans-serif;
+  scroll-behavior: smooth;
+}
+
+#intro-div {
+  z-index: 9999;
+  animation: intro 0.5s ease-in-out forwards 2.5s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: rgb(1, 21, 20);
+  font-size: 72px;
+  color: $light_t;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    animation: appear 2s ease-in-out forwards;
+    opacity: 0;
+    transform: rotateY(-190deg);
+  }
+}
+
+body{
+    animation: body_overflow 6s linear forwards;
+    background: $dark_t;
+    overflow-y: hidden;
+}
+
+#logo:hover{
+  opacity: 0.8; 
+}
+
+.nav-links{
+  a{
+    color: $lightest_slate;
+    text-decoration: none;
+  } 
+  a:hover{
+    color: $light_t;
+  }
+  list-style: none;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 50px;
+  #links-only{
+    display: flex;
+    margin-left: auto;
+    li{
+      padding: 10px 20px;
+    }
+  }
+}
+
+#outer-main{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  #main{
+    min-height: 100vh;
+    width: 80%;
+    margin: 40px 0px;
+    .hey-name{
+      color: $light_t;
+      letter-spacing: 2px;
+    }
+    .name{
+      font-size: 4rem;
+      color: $lightest_slate;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    #upper-main{
+      
+    }
+  }
+}
+
+// ALL ANIMATIONS
+@keyframes appear {
+  100% {
+    opacity: 1;
+    filter: brightness(120%);
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes intro {
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@keyframes body_overflow{
+    100%{
+        overflow-y: visible;
+    }
+}
