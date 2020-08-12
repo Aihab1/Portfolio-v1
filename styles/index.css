@@ -8,6 +8,10 @@
   scroll-behavior: smooth;
 }
 
+p {
+  letter-spacing: 1px;
+}
+
 ::-webkit-scrollbar {
   background-color: transparent;
   width: 10px;
@@ -77,6 +81,7 @@
   left: 0;
   width: 100%;
   height: 80px;
+  z-index: 1030;
 }
 
 .scrolled-down {
@@ -140,7 +145,6 @@ body {
 }
 
 #outer-main {
-  margin-top: 100px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -157,23 +161,162 @@ body {
 #outer-main #main {
   min-height: 100vh;
   width: 80%;
-  margin: 40px 0px;
 }
 
-#outer-main #main .hey-name {
+#outer-main #main #upper-main {
+  min-height: 100vh;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#outer-main #main #upper-main .short-desc {
+  color: #ccd6f6;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  width: 70%;
+}
+
+#outer-main #main #upper-main .hello-name {
   color: #00b49d;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
-#outer-main #main .name, #outer-main #main .sub-name {
+#outer-main #main #upper-main .name,
+#outer-main #main #upper-main .sub-name {
   font-size: 4rem;
   color: #ccd6f6;
   font-weight: bold;
   letter-spacing: 2px;
 }
 
-#outer-main #main .sub-name {
+#outer-main #main #upper-main .sub-name {
   color: #ffa009;
+  background-image: linear-gradient(30deg, #ffa009, #fc7400);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+#outer-main #main .section-heading {
+  font-size: 2rem;
+  color: #00b49d;
+}
+
+#outer-main #main #about-me {
+  min-height: 100vh;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#outer-main #main #about-me .para-picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#outer-main #main #about-me .para-picture .para {
+  width: 60%;
+  color: #ccd6f6;
+  padding: 30px 30px 30px 0;
+}
+
+#outer-main #main #about-me .para-picture .para .svg-skill {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#outer-main #main #about-me .para-picture .para .svg-skill p {
+  margin: 0;
+  padding: 10px 30px 10px 10px;
+  color: #00b49d;
+}
+
+#outer-main #main #about-me .para-picture .para #outer-svg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 60%;
+}
+
+#outer-main #main #about-me .para-picture .picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 300px;
+  height: 300px;
+  border: 2px solid #00b49d;
+  border-radius: 50%;
+  margin: 20px 0 20px 20px;
+}
+
+#outer-main #main #about-me .para-picture .picture .picture-background {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 20px;
+  width: 250px;
+  height: 250px;
+}
+
+#outer-main #main #about-me .para-picture .picture .picture-background img {
+  border-radius: 50%;
+}
+
+#outer-main #main #about-me .para-picture .picture .picture-background #overlay-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fc7400;
+  opacity: 0.2;
+}
+
+#outer-main #main #about-me .para-picture .picture .picture-background #overlay-effect:hover {
+  background: transparent;
 }
 
 @-webkit-keyframes appear {

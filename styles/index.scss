@@ -17,7 +17,9 @@ $slate: #8892b0;
   font-family: "Heebo", sans-serif;
   scroll-behavior: smooth;
 }
-
+p {
+  letter-spacing: 1px;
+}
 //Custom Scrollbar
 ::-webkit-scrollbar {
   background-color: transparent;
@@ -70,43 +72,43 @@ $slate: #8892b0;
   }
 }
 
-.smart-scroll{
+.smart-scroll {
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   width: 100%;
   height: 80px;
-  // z-index: 1030;
+  z-index: 1030;
   // background: $dark_t;
 }
-.scrolled-down{
-   transform:translateY(-110%); 
-   transition: all 0.3s ease-in-out;
-   background: transparent;
+.scrolled-down {
+  transform: translateY(-110%);
+  transition: all 0.3s ease-in-out;
+  background: transparent;
 }
-.scrolled-up{
-   transform:translateY(0); 
-   transition: all 0.3s ease-in-out;
-   background: $dark_t;
-}
-
-body{
-    animation: body_overflow 6s linear forwards;
-    background: $dark_t;
-    overflow-y: hidden;
+.scrolled-up {
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+  background: $dark_t;
 }
 
-#logo:hover{
-  opacity: 0.8; 
+body {
+  animation: body_overflow 6s linear forwards;
+  background: $dark_t;
+  overflow-y: hidden;
 }
 
-.nav-links{
-  a{
+#logo:hover {
+  opacity: 0.8;
+}
+
+.nav-links {
+  a {
     color: $lightest_slate;
     text-decoration: none;
-  } 
-  a:hover{
+  }
+  a:hover {
     color: $light_t;
   }
   list-style: none;
@@ -114,42 +116,136 @@ body{
   align-items: center;
   justify-content: space-around;
   padding: 10px 50px;
-  #links-only{
+  #links-only {
     display: flex;
     margin-left: auto;
-    li{
+    li {
       padding: 10px 20px;
     }
   }
 }
 
-#outer-main{
-  margin-top: 100px;
+#outer-main {
+  // margin-top: 100px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  #main{
+  #main {
     min-height: 100vh;
     width: 80%;
-    margin: 40px 0px;
-    .hey-name{
+    #upper-main {
+      min-height: 100vh;
+      padding-top: 150px;
+      padding-bottom: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .short-desc {
+        color: $lightest_slate;
+        letter-spacing: 1px;
+        margin-top: 30px;
+        width: 70%;
+      }
+      .hello-name {
+        color: $light_t;
+        letter-spacing: 1px;
+      }
+      .name,
+      .sub-name {
+        font-size: 4rem;
+        color: $lightest_slate;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+      .sub-name {
+        color: $light_o;
+        background-image: linear-gradient(30deg, $light_o, $dark_o);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+      }
+    }
+    .section-heading {
+      font-size: 2rem;
       color: $light_t;
-      letter-spacing: 2px;
     }
-    .name, .sub-name{
-      font-size: 4rem;
-      color: $lightest_slate;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
-    .sub-name{
-      color: $light_o;
+    #about-me {
+      min-height: 100vh;
+      padding-top: 150px;
+      padding-bottom: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  
+      .para-picture {
+        display: flex;
+        flex-direction: row-reverse;
+        // flex-wrap: wrap-reverse;
+        justify-content: space-between;
+        .para{
+          width: 60%;
+          color: $lightest_slate;
+          padding: 30px 30px 30px 0;
+          .svg-skill{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            p{
+              margin: 0;
+              padding: 10px 30px 10px 10px;
+              color: $light_t;
+            }
+          }
+          #outer-svg{
+            display: flex;
+            flex-wrap: wrap;
+            width: 60%;
+          }
+        }
+        .picture{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          // background: pink;
+          width: 300px;
+          height: 300px;
+          border: 2px solid $light_t;
+          border-radius: 50%;
+          margin: 20px 0 20px 20px;
+          .picture-background{
+            position: relative;
+            overflow: hidden;
+            border-radius: 50%;
+            margin: 20px;
+            width: 250px;
+            height: 250px;
+            img{
+              border-radius: 50%;
+            }
+            #overlay-effect{
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: $dark_o;
+              opacity: 0.2;
+            }
+            #overlay-effect:hover{
+              background: transparent;
+            }
+          }
+        }
+      }
     }
   }
 }
 
-// ALL ANIMATIONS
+//ALL ANIMATIONS
 @keyframes appear {
   100% {
     opacity: 1;
@@ -165,8 +261,8 @@ body{
   }
 }
 
-@keyframes body_overflow{
-    100%{
-        overflow-y: visible;
-    }
+@keyframes body_overflow {
+  100% {
+    overflow-y: visible;
+  }
 }
