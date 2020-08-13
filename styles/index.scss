@@ -17,7 +17,7 @@ $slate: #8892b0;
   font-family: "Heebo", sans-serif;
   scroll-behavior: smooth;
 }
-p {
+p, th, td {
   letter-spacing: 1px;
 }
 //Custom Scrollbar
@@ -171,42 +171,44 @@ body {
     .section-heading {
       font-size: 2rem;
       color: $light_t;
+      font-weight: bold;
     }
     #about-me {
       min-height: 100vh;
-      padding-top: 150px;
-      padding-bottom: 150px;
+      padding-top: 100px;
+      padding-bottom: 100px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-  
+
       .para-picture {
         display: flex;
         flex-direction: row-reverse;
         // flex-wrap: wrap-reverse;
         justify-content: space-between;
-        .para{
+        .para {
           width: 60%;
           color: $lightest_slate;
           padding: 30px 30px 30px 0;
-          .svg-skill{
+          .svg-skill {
             margin: 0;
             padding: 0;
             display: flex;
             align-items: center;
-            p{
+            p {
               margin: 0;
               padding: 10px 30px 10px 10px;
               color: $light_t;
+              font-size: 0.9rem;
             }
           }
-          #outer-svg{
+          #outer-svg {
             display: flex;
             flex-wrap: wrap;
-            width: 60%;
+            // width: 60%;
           }
         }
-        .picture{
+        .picture {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -216,35 +218,195 @@ body {
           border: 2px solid $light_t;
           border-radius: 50%;
           margin: 20px 0 20px 20px;
-          .picture-background{
+          .picture-background {
             position: relative;
-            overflow: hidden;
+            // overflow: hidden;
             border-radius: 50%;
-            margin: 20px;
             width: 250px;
             height: 250px;
-            img{
+            img {
               border-radius: 50%;
             }
-            #overlay-effect{
+            #overlay-effect {
               position: absolute;
               top: 0;
               left: 0;
               width: 100%;
               height: 100%;
-              background: $dark_o;
-              opacity: 0.2;
+              // background: $dark_o;
+              // opacity: 0.2;
+              border-radius: 10%;
+              border: 2px solid $light_t;
+              animation: rotate 15s linear forwards 0s infinite;
+              transition: all 1s ease-in-out;
             }
-            #overlay-effect:hover{
-              background: transparent;
+            #overlay-effect:hover {
+              border-radius: 20%;
             }
+          }
+        }
+      }
+    }
+    #my-projects {
+      min-height: 100vh;
+      padding-top: 100px;
+      // padding-bottom: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      
+      .project-holder{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-top: 35px;
+        padding-bottom: 35px;
+        img{
+          opacity: 0.6;
+          border-radius: 5px;
+          box-shadow: 0px 0px 15px $background_color;
+          transition: 0.5s ease-in-out;
+          width: 80%;
+        }
+        img:hover{
+          opacity: 0.9;
+        }
+        .project-content{
+          width: 50%;
+          text-align: right;
+          p:nth-child(1){
+            color: $t;
+            font-size: 1.5rem;
+          }
+          p{
+            color: $lightest_slate;
+          }
+          a{
+            padding: 10px 0 10px 20px;
+            text-decoration: none;
+          }
+          a:hover{
+            opacity: 0.8;
+          }
+          svg{
+            fill: $light_o;
+          }
+        }
+      }
+      .project-holder2{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 35px;
+        padding-bottom: 35px;
+        img{
+          opacity: 0.6;
+          border-radius: 5px;
+          box-shadow: 0px 0px 15px $background_color;
+          transition: 0.5s ease-in-out;
+          width: 80%;
+        }
+        img:hover{
+          opacity: 0.9;
+        }
+        .project-content2{
+          width: 60%;
+          text-align: center;  
+          p:nth-child(1){
+            color: $t;
+            font-size: 1.5rem;
+          }
+          p{
+            color: $lightest_slate;
+          }
+          a{
+            padding: 10px 0 10px 20px;
+            text-decoration: none;
+          }
+          a:hover{
+            opacity: 0.8;
+          }
+          svg{
+            fill: $light_o;
+          }
+        }
+      }
+      .project-holder3{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 35px;
+        img{
+          opacity: 0.6;
+          border-radius: 5px;
+          box-shadow: 0px 0px 15px $background_color;
+          transition: 0.5s ease-in-out;
+          width: 80%;
+        }
+        img:hover{
+          opacity: 0.9;
+        }
+        .project-content3{
+          width: 50%;
+          text-align: left;
+          p:nth-child(1){
+            color: $t;
+            font-size: 1.5rem;
+          }
+          p{
+            color: $lightest_slate;
+          }
+          a{
+            padding: 10px 20px 10px 0px;
+            text-decoration: none;
+          }
+          a:hover{
+            opacity: 0.8;
+          }
+          svg{
+            fill: $light_o;
           }
         }
       }
     }
   }
 }
-
+#complete-project-list{
+  padding: 100px 0;
+  table{
+    width: 100%;
+  }
+  tr{
+    transition: 0.5s ease-in-out;
+  }
+  tr:hover{
+    background: $background_color;
+  }
+  th, td{
+    color: $t;
+    padding: 15px;
+    a{
+      padding: 10px 20px 10px 0;
+      text-decoration: none;
+    }
+    a:hover{
+      opacity: 0.8;
+    }
+    svg{
+      fill: $light_o;
+    }
+  }
+  td{
+    color: $light_t;
+  }
+}
 //ALL ANIMATIONS
 @keyframes appear {
   100% {
@@ -264,5 +426,11 @@ body {
 @keyframes body_overflow {
   100% {
     overflow-y: visible;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
   }
 }

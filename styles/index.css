@@ -8,7 +8,7 @@
   scroll-behavior: smooth;
 }
 
-p {
+p, th, td {
   letter-spacing: 1px;
 }
 
@@ -212,12 +212,13 @@ body {
 #outer-main #main .section-heading {
   font-size: 2rem;
   color: #00b49d;
+  font-weight: bold;
 }
 
 #outer-main #main #about-me {
   min-height: 100vh;
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -264,6 +265,7 @@ body {
   margin: 0;
   padding: 10px 30px 10px 10px;
   color: #00b49d;
+  font-size: 0.9rem;
 }
 
 #outer-main #main #about-me .para-picture .para #outer-svg {
@@ -272,7 +274,6 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 60%;
 }
 
 #outer-main #main #about-me .para-picture .picture {
@@ -294,9 +295,7 @@ body {
 
 #outer-main #main #about-me .para-picture .picture .picture-background {
   position: relative;
-  overflow: hidden;
   border-radius: 50%;
-  margin: 20px;
   width: 250px;
   height: 250px;
 }
@@ -311,12 +310,246 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #fc7400;
-  opacity: 0.2;
+  border-radius: 10%;
+  border: 2px solid #00b49d;
+  -webkit-animation: rotate 15s linear forwards 0s infinite;
+          animation: rotate 15s linear forwards 0s infinite;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 #outer-main #main #about-me .para-picture .picture .picture-background #overlay-effect:hover {
-  background: transparent;
+  border-radius: 20%;
+}
+
+#outer-main #main #my-projects {
+  min-height: 100vh;
+  padding-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#outer-main #main #my-projects .project-holder {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+#outer-main #main #my-projects .project-holder img {
+  opacity: 0.6;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 15px #011514;
+          box-shadow: 0px 0px 15px #011514;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  width: 80%;
+}
+
+#outer-main #main #my-projects .project-holder img:hover {
+  opacity: 0.9;
+}
+
+#outer-main #main #my-projects .project-holder .project-content {
+  width: 50%;
+  text-align: right;
+}
+
+#outer-main #main #my-projects .project-holder .project-content p:nth-child(1) {
+  color: #007563;
+  font-size: 1.5rem;
+}
+
+#outer-main #main #my-projects .project-holder .project-content p {
+  color: #ccd6f6;
+}
+
+#outer-main #main #my-projects .project-holder .project-content a {
+  padding: 10px 0 10px 20px;
+  text-decoration: none;
+}
+
+#outer-main #main #my-projects .project-holder .project-content a:hover {
+  opacity: 0.8;
+}
+
+#outer-main #main #my-projects .project-holder .project-content svg {
+  fill: #ffa009;
+}
+
+#outer-main #main #my-projects .project-holder2 {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+#outer-main #main #my-projects .project-holder2 img {
+  opacity: 0.6;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 15px #011514;
+          box-shadow: 0px 0px 15px #011514;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  width: 80%;
+}
+
+#outer-main #main #my-projects .project-holder2 img:hover {
+  opacity: 0.9;
+}
+
+#outer-main #main #my-projects .project-holder2 .project-content2 {
+  width: 60%;
+  text-align: center;
+}
+
+#outer-main #main #my-projects .project-holder2 .project-content2 p:nth-child(1) {
+  color: #007563;
+  font-size: 1.5rem;
+}
+
+#outer-main #main #my-projects .project-holder2 .project-content2 p {
+  color: #ccd6f6;
+}
+
+#outer-main #main #my-projects .project-holder2 .project-content2 a {
+  padding: 10px 0 10px 20px;
+  text-decoration: none;
+}
+
+#outer-main #main #my-projects .project-holder2 .project-content2 a:hover {
+  opacity: 0.8;
+}
+
+#outer-main #main #my-projects .project-holder2 .project-content2 svg {
+  fill: #ffa009;
+}
+
+#outer-main #main #my-projects .project-holder3 {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-top: 35px;
+}
+
+#outer-main #main #my-projects .project-holder3 img {
+  opacity: 0.6;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 15px #011514;
+          box-shadow: 0px 0px 15px #011514;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  width: 80%;
+}
+
+#outer-main #main #my-projects .project-holder3 img:hover {
+  opacity: 0.9;
+}
+
+#outer-main #main #my-projects .project-holder3 .project-content3 {
+  width: 50%;
+  text-align: left;
+}
+
+#outer-main #main #my-projects .project-holder3 .project-content3 p:nth-child(1) {
+  color: #007563;
+  font-size: 1.5rem;
+}
+
+#outer-main #main #my-projects .project-holder3 .project-content3 p {
+  color: #ccd6f6;
+}
+
+#outer-main #main #my-projects .project-holder3 .project-content3 a {
+  padding: 10px 20px 10px 0px;
+  text-decoration: none;
+}
+
+#outer-main #main #my-projects .project-holder3 .project-content3 a:hover {
+  opacity: 0.8;
+}
+
+#outer-main #main #my-projects .project-holder3 .project-content3 svg {
+  fill: #ffa009;
+}
+
+#complete-project-list {
+  padding: 100px 0;
+}
+
+#complete-project-list table {
+  width: 100%;
+}
+
+#complete-project-list tr {
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+#complete-project-list tr:hover {
+  background: #011514;
+}
+
+#complete-project-list th, #complete-project-list td {
+  color: #007563;
+  padding: 15px;
+}
+
+#complete-project-list th a, #complete-project-list td a {
+  padding: 10px 20px 10px 0;
+  text-decoration: none;
+}
+
+#complete-project-list th a:hover, #complete-project-list td a:hover {
+  opacity: 0.8;
+}
+
+#complete-project-list th svg, #complete-project-list td svg {
+  fill: #ffa009;
+}
+
+#complete-project-list td {
+  color: #00b49d;
 }
 
 @-webkit-keyframes appear {
@@ -362,6 +595,20 @@ body {
 @keyframes body_overflow {
   100% {
     overflow-y: visible;
+  }
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 /*# sourceMappingURL=index.css.map */
