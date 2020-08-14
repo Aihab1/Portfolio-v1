@@ -8,7 +8,9 @@
   scroll-behavior: smooth;
 }
 
-p, th, td {
+p,
+th,
+td {
   letter-spacing: 1px;
 }
 
@@ -530,21 +532,25 @@ body {
   background: #011514;
 }
 
-#complete-project-list th, #complete-project-list td {
+#complete-project-list th,
+#complete-project-list td {
   color: #007563;
   padding: 15px;
 }
 
-#complete-project-list th a, #complete-project-list td a {
+#complete-project-list th a,
+#complete-project-list td a {
   padding: 10px 20px 10px 0;
   text-decoration: none;
 }
 
-#complete-project-list th a:hover, #complete-project-list td a:hover {
+#complete-project-list th a:hover,
+#complete-project-list td a:hover {
   opacity: 0.8;
 }
 
-#complete-project-list th svg, #complete-project-list td svg {
+#complete-project-list th svg,
+#complete-project-list td svg {
   fill: #ffa009;
 }
 
@@ -577,7 +583,7 @@ body {
 }
 
 #contact-me #social-holder {
-  margin: 35px 0;
+  margin: 35px 0 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -598,6 +604,79 @@ body {
   fill: #007563;
   width: 30px;
   height: 30px;
+}
+
+#contact-me .email-me {
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  text-decoration: none;
+  padding: 10px 20px;
+  background: transparent;
+  border-radius: 10px;
+  color: #00b49d;
+  border: 1.5px solid #007563;
+}
+
+#contact-me .email-me:hover {
+  background: #007563;
+  color: #011514;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+footer .footer-heading {
+  font-weight: bold;
+  color: #00b49d;
+}
+
+footer .footer-content {
+  color: #007563;
+}
+
+footer .footer-attribution {
+  color: #00b49d;
+}
+
+footer .footer-attribution a {
+  text-decoration: underline;
+  color: #00b49d;
+}
+
+footer .footer-attribution a:hover {
+  color: #007563;
+}
+
+footer #created-by {
+  padding: 20px;
+  margin-top: 35px;
+  background: #011514;
+  opacity: 0.8;
+  width: 100%;
+}
+
+footer #created-by a {
+  color: #ccd6f6;
 }
 
 @-webkit-keyframes appear {

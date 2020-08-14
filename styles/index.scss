@@ -17,7 +17,9 @@ $slate: #8892b0;
   font-family: "Heebo", sans-serif;
   scroll-behavior: smooth;
 }
-p, th, td {
+p,
+th,
+td {
   letter-spacing: 1px;
 }
 //Custom Scrollbar
@@ -255,8 +257,8 @@ body {
       flex-direction: column;
       align-items: flex-end;
       justify-content: center;
-      
-      .project-holder{
+
+      .project-holder {
         width: 100%;
         height: auto;
         display: flex;
@@ -264,39 +266,39 @@ body {
         align-items: flex-end;
         padding-top: 35px;
         padding-bottom: 35px;
-        img{
+        img {
           opacity: 0.6;
           border-radius: 5px;
           box-shadow: 0px 0px 15px $background_color;
           transition: 0.5s ease-in-out;
           width: 80%;
         }
-        img:hover{
+        img:hover {
           opacity: 0.9;
         }
-        .project-content{
+        .project-content {
           width: 50%;
           text-align: right;
-          p:nth-child(1){
+          p:nth-child(1) {
             color: $t;
             font-size: 1.5rem;
           }
-          p{
+          p {
             color: $lightest_slate;
           }
-          a{
+          a {
             padding: 10px 0 10px 20px;
             text-decoration: none;
           }
-          a:hover{
+          a:hover {
             opacity: 0.8;
           }
-          svg{
+          svg {
             fill: $light_o;
           }
         }
       }
-      .project-holder2{
+      .project-holder2 {
         width: 100%;
         height: auto;
         display: flex;
@@ -304,73 +306,73 @@ body {
         align-items: center;
         padding-top: 35px;
         padding-bottom: 35px;
-        img{
+        img {
           opacity: 0.6;
           border-radius: 5px;
           box-shadow: 0px 0px 15px $background_color;
           transition: 0.5s ease-in-out;
           width: 80%;
         }
-        img:hover{
+        img:hover {
           opacity: 0.9;
         }
-        .project-content2{
+        .project-content2 {
           width: 60%;
-          text-align: center;  
-          p:nth-child(1){
+          text-align: center;
+          p:nth-child(1) {
             color: $t;
             font-size: 1.5rem;
           }
-          p{
+          p {
             color: $lightest_slate;
           }
-          a{
+          a {
             padding: 10px 0 10px 20px;
             text-decoration: none;
           }
-          a:hover{
+          a:hover {
             opacity: 0.8;
           }
-          svg{
+          svg {
             fill: $light_o;
           }
         }
       }
-      .project-holder3{
+      .project-holder3 {
         width: 100%;
         height: auto;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         padding-top: 35px;
-        img{
+        img {
           opacity: 0.6;
           border-radius: 5px;
           box-shadow: 0px 0px 15px $background_color;
           transition: 0.5s ease-in-out;
           width: 80%;
         }
-        img:hover{
+        img:hover {
           opacity: 0.9;
         }
-        .project-content3{
+        .project-content3 {
           width: 50%;
           text-align: left;
-          p:nth-child(1){
+          p:nth-child(1) {
             color: $t;
             font-size: 1.5rem;
           }
-          p{
+          p {
             color: $lightest_slate;
           }
-          a{
+          a {
             padding: 10px 20px 10px 0px;
             text-decoration: none;
           }
-          a:hover{
+          a:hover {
             opacity: 0.8;
           }
-          svg{
+          svg {
             fill: $light_o;
           }
         }
@@ -378,40 +380,41 @@ body {
     }
   }
 }
-#complete-project-list{
+#complete-project-list {
   padding: 100px 0;
-  table{
+  table {
     width: 100%;
   }
-  tr{
+  tr {
     transition: 0.5s ease-in-out;
   }
-  tr:hover{
+  tr:hover {
     background: $background_color;
   }
-  th, td{
+  th,
+  td {
     color: $t;
     padding: 15px;
-    a{
+    a {
       padding: 10px 20px 10px 0;
       text-decoration: none;
     }
-    a:hover{
+    a:hover {
       opacity: 0.8;
     }
-    svg{
+    svg {
       fill: $light_o;
     }
   }
-  td{
+  td {
     color: $light_t;
   }
 }
-.projects-intro{
+.projects-intro {
   color: $lightest_slate;
   margin-top: 35px;
 }
-#contact-me{
+#contact-me {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -419,22 +422,74 @@ body {
   justify-content: center;
   padding-top: 150px;
   padding-bottom: 150px;
-  #social-holder{
-    margin: 35px 0;
+  #social-holder {
+    margin: 35px 0 0 0;
     display: flex;
     flex-wrap: wrap;
-    a{
+    a {
       text-decoration: none;
       padding: 15px;
     }
-    a:hover svg{
+    a:hover svg {
       fill: $light_t;
     }
-    svg{
+    svg {
       fill: $t;
       width: 30px;
       height: 30px;
     }
+  }
+  .email-me{
+    transition: 0.5s ease-in-out;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: transparent;
+    border-radius: 10px;
+    color: $light_t;
+    border: 1.5px solid $t;
+  }
+  .email-me:hover{
+    background: $t;
+    color: $background_color;
+  }
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  p{
+    font-size: 0.8rem;
+    margin: 0;
+  }
+  .footer-heading {
+    font-weight: bold;
+    color: $light_t;
+  }
+  .footer-content{
+    color: $t;
+  }
+  .footer-attribution{
+    color: $light_t;
+    a{
+      text-decoration: underline;
+      color: $light_t;
+    }
+    a:hover{
+      color: $t;
+    }
+  }
+  #created-by{
+    a{
+      color: $lightest_slate;
+    }
+    padding: 20px;
+    margin-top: 35px;
+    background: $background_color;
+    opacity: 0.8;
+    width: 100%;
   }
 }
 //ALL ANIMATIONS
