@@ -407,6 +407,36 @@ body {
     color: $light_t;
   }
 }
+.projects-intro{
+  color: $lightest_slate;
+  margin-top: 35px;
+}
+#contact-me{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  #social-holder{
+    margin: 35px 0;
+    display: flex;
+    flex-wrap: wrap;
+    a{
+      text-decoration: none;
+      padding: 15px;
+    }
+    a:hover svg{
+      fill: $light_t;
+    }
+    svg{
+      fill: $t;
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
 //ALL ANIMATIONS
 @keyframes appear {
   100% {

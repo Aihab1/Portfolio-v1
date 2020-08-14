@@ -552,6 +552,54 @@ body {
   color: #00b49d;
 }
 
+.projects-intro {
+  color: #ccd6f6;
+  margin-top: 35px;
+}
+
+#contact-me {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+#contact-me #social-holder {
+  margin: 35px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#contact-me #social-holder a {
+  text-decoration: none;
+  padding: 15px;
+}
+
+#contact-me #social-holder a:hover svg {
+  fill: #00b49d;
+}
+
+#contact-me #social-holder svg {
+  fill: #007563;
+  width: 30px;
+  height: 30px;
+}
+
 @-webkit-keyframes appear {
   100% {
     opacity: 1;
