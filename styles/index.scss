@@ -17,6 +17,7 @@ $slate: #8892b0;
   font-family: "Heebo", sans-serif;
   scroll-behavior: smooth;
 }
+
 p,
 th,
 td {
@@ -54,6 +55,7 @@ td {
 }
 
 #intro-div {
+  overflow-x: hidden;
   z-index: 9999;
   animation: intro 0.5s ease-in-out forwards 2.5s;
   position: fixed;
@@ -80,7 +82,7 @@ td {
   right: 0;
   left: 0;
   width: 100%;
-  height: 80px;
+  height: 70px;
   z-index: 1030;
   // background: $dark_t;
 }
@@ -99,6 +101,7 @@ body {
   animation: body_overflow 6s linear forwards;
   background: $dark_t;
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 #logo:hover {
@@ -118,16 +121,17 @@ body {
   align-items: center;
   justify-content: space-around;
   padding: 10px 50px;
-  #links-only {
-    display: flex;
-    margin-left: auto;
-    li {
-      padding: 10px 20px;
-    }
+}
+#links-only {
+  display: flex;
+  margin-left: auto;
+  li {
+    padding: 10px 20px;
   }
 }
 
 #outer-main {
+  overflow-x: hidden;
   // margin-top: 100px;
   width: 100%;
   display: flex;
@@ -137,6 +141,7 @@ body {
     min-height: 100vh;
     width: 80%;
     #upper-main {
+      overflow-x: hidden;
       min-height: 100vh;
       padding-top: 150px;
       padding-bottom: 150px;
@@ -381,6 +386,7 @@ body {
   }
 }
 #complete-project-list {
+  overflow-x: hidden;
   padding: 100px 0;
   table {
     width: 100%;
@@ -415,6 +421,7 @@ body {
   margin-top: 35px;
 }
 #contact-me {
+  overflow-x: hidden;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -439,7 +446,7 @@ body {
       height: 30px;
     }
   }
-  .email-me{
+  .email-me {
     transition: 0.5s ease-in-out;
     text-decoration: none;
     padding: 10px 20px;
@@ -448,19 +455,20 @@ body {
     color: $light_t;
     border: 1.5px solid $t;
   }
-  .email-me:hover{
+  .email-me:hover {
     background: $t;
     color: $background_color;
   }
 }
 footer {
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   width: 100%;
   justify-content: center;
   align-items: center;
   text-align: center;
-  p{
+  p {
     font-size: 0.8rem;
     margin: 0;
   }
@@ -468,21 +476,21 @@ footer {
     font-weight: bold;
     color: $light_t;
   }
-  .footer-content{
+  .footer-content {
     color: $t;
   }
-  .footer-attribution{
+  .footer-attribution {
     color: $light_t;
-    a{
+    a {
       text-decoration: underline;
       color: $light_t;
     }
-    a:hover{
+    a:hover {
       color: $t;
     }
   }
-  #created-by{
-    a{
+  #created-by {
+    a {
       color: $lightest_slate;
     }
     padding: 20px;
@@ -517,5 +525,234 @@ footer {
 @keyframes rotate {
   100% {
     transform: rotate(360deg);
+  }
+}
+
+// MEDIA QUERIES
+
+@media screen and (max-width: 900px) {
+  p {
+    font-size: 0.9rem;
+  }
+  #intro-div {
+    svg {
+      width: 50px;
+    }
+  }
+  #outer-main {
+    #main {
+      #upper-main {
+        .name,
+        .sub-name {
+          font-size: 3rem;
+        }
+      }
+      .section-heading {
+        font-size: 1.8rem;
+      }
+
+      #about-me {
+        .para-picture {
+          flex-direction: row;
+          flex-wrap: wrap;
+          .para {
+            width: 100%;
+          }
+          .picture {
+            width: 250px;
+            height: 250px;
+            margin: 20px 20px 20px 0;
+            .picture-background {
+              border-radius: 50%;
+              width: 200px;
+              height: 200px;
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    p {
+      padding: 0 15px;
+    }
+    #created-by {
+      a {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #outer-main {
+    #main {
+      #my-projects {
+        .project-holder,
+        .project-holder2,
+        .project-holder3 {
+          .project-content,
+          .project-content2,
+          .project-content3 {
+            width: 75%;
+          }
+        }
+      }
+    }
+  }
+  #complete-project-list {
+    tr,
+    th,
+    td {
+      font-size: 0.9rem;
+    }
+    th{
+      padding: 15px 20px;
+    }
+    td {
+      padding: 15px 0;
+      margin: 0 10px;
+      a {
+        padding: 15px 0 15px 15px;
+      }
+      svg {
+        width: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .extra-para {
+    height: 0;
+    width: 0;
+    overflow: hidden;
+  }
+  #outer-main {
+    #main {
+      #my-projects {
+        .project-holder,
+        .project-holder2,
+        .project-holder3 {
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  #contact-me {
+    #social-holder {
+      svg {
+        width: 25px;
+        height: 25px;
+      }
+    }
+    .email-me {
+      font-size: 0.9rem;
+    }
+  }
+
+  // introducing all new hamburger :D
+  .nav-links {
+    justify-content: space-between;
+    a {
+      color: $light_t;
+    }
+    a:hover {
+      color: $t;
+    }
+    .hamburger-outer {
+      z-index: 1031;
+      padding: 15px;
+    }
+    .hamburger {
+      transition: 0.5s ease-in-out;
+      width: 25px;
+      height: 2px;
+      margin-bottom: 5px;
+      background: $light_t;
+      z-index: 1031;
+    }
+  }
+  #links-only {
+    transition: 0.5s ease-in-out;
+    position: fixed;
+    top: 0;
+    right: -102%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 100vw;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: $background_color;
+    opacity: 0.8;
+  }
+  #links-only.clicked {
+    right: 0;
+  }
+  #outer-main.clicked{
+    transition: 0.5s ease-in-out;
+    filter: blur(3px);
+  }  
+  .hamburger-outer.clicked {
+    .hamburger1 {
+      transform: rotate(45deg) translateX(39%);
+    }
+    .hamburger3 {
+      transform: rotate(315deg) translateX(39%);
+    }
+    .hamburger2 {
+      transform: translateX(-150%);
+      opacity: 0;
+    }
+  }
+  .logo {
+    z-index: 1031;
+  }
+}
+
+@media screen and (max-height: 400px) and (max-width: 600px) {
+  .nav-links {
+    a {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 500px){
+  .nav-links{
+    padding: 10px 25px;
+  }
+  #outer-main {
+    #main {
+      width: 90%;
+      #upper-main {
+        .name,
+        .sub-name {
+          font-size: 2rem;
+        }
+        .short-desc{
+          width: 90%;
+        }
+      }
+      .section-heading {
+        font-size: 1.6rem;
+      }
+      #my-projects {
+        .project-holder,
+        .project-holder2,
+        .project-holder3 {
+          .project-content,
+          .project-content2,
+          .project-content3 {
+            width: 90%;
+          }
+        }
+      }
+    }
   }
 }
