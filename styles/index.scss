@@ -629,6 +629,7 @@ footer {
     overflow: hidden;
   }
   #outer-main {
+    transition: 0.5s ease-in-out;
     #main {
       #my-projects {
         .project-holder,
@@ -641,6 +642,9 @@ footer {
       }
     }
   }
+  #outer-main.clicked{
+    filter: opacity(0.3);  
+  }  
   #contact-me {
     #social-holder {
       svg {
@@ -693,10 +697,6 @@ footer {
   #links-only.clicked {
     right: 0;
   }
-  #outer-main.clicked{
-    transition: 0.5s ease-in-out;
-    filter: blur(3px);
-  }  
   .hamburger-outer.clicked {
     .hamburger1 {
       transform: rotate(45deg) translateX(39%);
